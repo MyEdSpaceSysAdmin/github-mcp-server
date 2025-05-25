@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strings"
 
 	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
 	"github.com/google/go-github/v69/github"
@@ -285,6 +286,11 @@ func CreateOrUpdateFile(getClient GetClientFn, t translations.TranslationHelperF
 			branch, err := requiredParam[string](request, "branch")
 			if err != nil {
 				return mcp.NewToolResultError(err.Error()), nil
+			}
+
+			// Check if branch starts with "bot/"
+			if !strings.HasPrefix(branch, "bot/") {
+				return mcp.NewToolResultError("can only create or update files in branches that start with 'bot/'"), nil
 			}
 
 			// json.Marshal encodes byte arrays with base64, which is required for the API.
@@ -613,6 +619,11 @@ func DeleteFile(getClient GetClientFn, t translations.TranslationHelperFunc) (to
 				return mcp.NewToolResultError(err.Error()), nil
 			}
 
+			// Check if branch starts with "bot/"
+			if !strings.HasPrefix(branch, "bot/") {
+				return mcp.NewToolResultError("can only delete files in branches that start with 'bot/'"), nil
+			}
+
 			client, err := getClient(ctx)
 			if err != nil {
 				return nil, fmt.Errorf("failed to get GitHub client: %w", err)
@@ -753,6 +764,12 @@ func CreateBranch(getClient GetClientFn, t translations.TranslationHelperFunc) (
 			if err != nil {
 				return mcp.NewToolResultError(err.Error()), nil
 			}
+
+			// Add "bot/" prefix if not already present
+			if !strings.HasPrefix(branch, "bot/") {
+				branch = "bot/" + branch
+			}
+
 			fromBranch, err := OptionalParam[string](request, "from_branch")
 			if err != nil {
 				return mcp.NewToolResultError(err.Error()), nil
@@ -871,6 +888,11 @@ func PushFiles(getClient GetClientFn, t translations.TranslationHelperFunc) (too
 			// Check if branch is main/master and reject
 			if branch == "main" || branch == "master" {
 				return mcp.NewToolResultError("cannot push directly to main/master branch"), nil
+			}
+
+			// Check if branch starts with "bot/"
+			if !strings.HasPrefix(branch, "bot/") {
+				return mcp.NewToolResultError("can only push files in branches that start with 'bot/'"), nil
 			}
 
 			// Parse files parameter - this should be an array of objects with path and content
