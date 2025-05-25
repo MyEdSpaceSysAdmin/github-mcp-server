@@ -44,17 +44,15 @@ var (
 			}
 
 			stdioServerConfig := ghmcp.StdioServerConfig{
-				Version:                version,
-				Host:                   viper.GetString("host"),
-				Token:                  token,
-				EnabledToolsets:        enabledToolsets,
-				DynamicToolsets:        viper.GetBool("dynamic_toolsets"),
-				ReadOnly:               viper.GetBool("read-only"),
-				ExportTranslations:     viper.GetBool("export-translations"),
-				EnableCommandLogging:   viper.GetBool("enable-command-logging"),
-				LogFilePath:            viper.GetString("log-file"),
-				DefaultDB:              viper.GetString("default_db"),
-				DefaultRepository:      viper.GetString("default_repository"),
+				Version:              version,
+				Host:                 viper.GetString("host"),
+				Token:                token,
+				EnabledToolsets:      enabledToolsets,
+				DynamicToolsets:      viper.GetBool("dynamic_toolsets"),
+				ReadOnly:             viper.GetBool("read-only"),
+				ExportTranslations:   viper.GetBool("export-translations"),
+				EnableCommandLogging: viper.GetBool("enable-command-logging"),
+				LogFilePath:          viper.GetString("log-file"),
 			}
 
 			return ghmcp.RunStdioServer(stdioServerConfig)
@@ -75,8 +73,6 @@ func init() {
 	rootCmd.PersistentFlags().Bool("enable-command-logging", false, "When enabled, the server will log all command requests and responses to the log file")
 	rootCmd.PersistentFlags().Bool("export-translations", false, "Save translations to a JSON file")
 	rootCmd.PersistentFlags().String("gh-host", "", "Specify the GitHub hostname (for GitHub Enterprise etc.)")
-	rootCmd.PersistentFlags().String("default-db", "", "Default database/owner to use when not explicitly specified in tool calls")
-	rootCmd.PersistentFlags().String("default-repository", "", "Default repository to use when not explicitly specified in tool calls")
 
 	// Bind flag to viper
 	_ = viper.BindPFlag("toolsets", rootCmd.PersistentFlags().Lookup("toolsets"))
@@ -86,8 +82,6 @@ func init() {
 	_ = viper.BindPFlag("enable-command-logging", rootCmd.PersistentFlags().Lookup("enable-command-logging"))
 	_ = viper.BindPFlag("export-translations", rootCmd.PersistentFlags().Lookup("export-translations"))
 	_ = viper.BindPFlag("host", rootCmd.PersistentFlags().Lookup("gh-host"))
-	_ = viper.BindPFlag("default_db", rootCmd.PersistentFlags().Lookup("default-db"))
-	_ = viper.BindPFlag("default_repository", rootCmd.PersistentFlags().Lookup("default-repository"))
 
 	// Add subcommands
 	rootCmd.AddCommand(stdioCmd)
