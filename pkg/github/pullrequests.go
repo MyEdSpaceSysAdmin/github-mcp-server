@@ -7,7 +7,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/github/github-mcp-server/pkg/translations"
+	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
 	"github.com/go-viper/mapstructure/v2"
 	"github.com/google/go-github/v69/github"
 	"github.com/mark3labs/mcp-go/mcp"

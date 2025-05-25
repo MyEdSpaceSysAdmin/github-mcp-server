@@ -16,9 +16,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/github/github-mcp-server/internal/ghmcp"
-	"github.com/github/github-mcp-server/pkg/github"
-	"github.com/github/github-mcp-server/pkg/translations"
+	"github.com/Atif-MyEdSpace/github-mcp-server/internal/ghmcp"
+	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/github"
+	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
 	gogithub "github.com/google/go-github/v69/github"
 	mcpClient "github.com/mark3labs/mcp-go/client"
 	"github.com/mark3labs/mcp-go/mcp"

@@ -7,7 +7,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/github/github-mcp-server/pkg/translations"
+	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
 	"github.com/google/go-github/v69/github"
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
@@ -866,6 +866,11 @@ func PushFiles(getClient GetClientFn, t translations.TranslationHelperFunc) (too
 			message, err := requiredParam[string](request, "message")
 			if err != nil {
 				return mcp.NewToolResultError(err.Error()), nil
+			}
+
+			// Check if branch is main/master and reject
+			if branch == "main" || branch == "master" {
+				return mcp.NewToolResultError("cannot push directly to main/master branch"), nil
 			}
 
 			// Parse files parameter - this should be an array of objects with path and content

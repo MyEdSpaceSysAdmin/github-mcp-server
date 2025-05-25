@@ -1,4 +1,4 @@
-module github.com/github/github-mcp-server
+module github.com/Atif-MyEdSpace/github-mcp-server
 
 go 1.23.7
 

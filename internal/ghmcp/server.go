@@ -12,9 +12,9 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/github/github-mcp-server/pkg/github"
-	mcplog "github.com/github/github-mcp-server/pkg/log"
-	"github.com/github/github-mcp-server/pkg/translations"
+	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/github"
+	mcplog "github.com/Atif-MyEdSpace/github-mcp-server/pkg/log"
+	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
 	gogithub "github.com/google/go-github/v69/github"
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"

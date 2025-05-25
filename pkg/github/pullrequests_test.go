@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/github/github-mcp-server/internal/githubv4mock"
-	"github.com/github/github-mcp-server/pkg/translations"
+	"github.com/Atif-MyEdSpace/github-mcp-server/internal/githubv4mock"
+	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
 	"github.com/google/go-github/v69/github"
 	"github.com/shurcooL/githubv4"
 
