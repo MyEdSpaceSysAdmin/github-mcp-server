@@ -68,7 +68,6 @@ func InitToolsets(passedToolsets []string, readOnly bool, getClient GetClientFn,
 			toolsets.NewServerTool(GetPullRequestDiff(getClient, t)),
 		).
 		AddWriteTools(
-			toolsets.NewServerTool(MergePullRequest(getClient, t)),
 			toolsets.NewServerTool(UpdatePullRequestBranch(getClient, t)),
 			toolsets.NewServerTool(CreatePullRequest(getClient, t)),
 			toolsets.NewServerTool(UpdatePullRequest(getClient, t)),
