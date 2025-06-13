@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Atif-MyEdSpace/github-mcp-server/internal/githubv4mock"
-	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
-	"github.com/google/go-github/v69/github"
+	"github.com/MyEdSpace/github-mcp-server/internal/githubv4mock"
+	"github.com/MyEdSpace/github-mcp-server/pkg/translations"
+	"github.com/google/go-github/v72/github"
 	"github.com/migueleliasweb/go-github-mock/src/mock"
 	"github.com/shurcooL/githubv4"
 	"github.com/stretchr/testify/assert"

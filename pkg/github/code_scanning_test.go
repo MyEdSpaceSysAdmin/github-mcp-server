@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
-	"github.com/google/go-github/v69/github"
+	"github.com/MyEdSpace/github-mcp-server/pkg/translations"
+	"github.com/google/go-github/v72/github"
 	"github.com/migueleliasweb/go-github-mock/src/mock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
