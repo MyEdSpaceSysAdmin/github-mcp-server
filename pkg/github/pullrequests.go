@@ -13,7 +13,7 @@ import (
 	"github.com/mark3labs/mcp-go/server"
 	"github.com/shurcooL/githubv4"
 
-	"github.com/github/github-mcp-server/pkg/translations"
+	"github.com/MyEdSpace/github-mcp-server/pkg/translations"
 )
 
 // GetPullRequest creates a tool to get details of a specific pull request.
