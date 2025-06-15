@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/toolsets"
-	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
+	"github.com/MyEdSpaceSysAdmin/github-mcp-server/pkg/toolsets"
+	"github.com/MyEdSpaceSysAdmin/github-mcp-server/pkg/translations"
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 )

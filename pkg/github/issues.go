@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
+	"github.com/MyEdSpaceSysAdmin/github-mcp-server/pkg/translations"
 	"github.com/go-viper/mapstructure/v2"
 	"github.com/google/go-github/v72/github"
 	"github.com/mark3labs/mcp-go/mcp"

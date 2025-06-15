@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Atif-MyEdSpace/github-mcp-server/internal/toolsnaps"
-	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
+	"github.com/MyEdSpaceSysAdmin/github-mcp-server/internal/toolsnaps"
+	"github.com/MyEdSpaceSysAdmin/github-mcp-server/pkg/translations"
 	"github.com/google/go-github/v72/github"
 	"github.com/migueleliasweb/go-github-mock/src/mock"
 	"github.com/stretchr/testify/assert"

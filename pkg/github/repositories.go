@@ -10,8 +10,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/raw"
-	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/translations"
+	"github.com/MyEdSpaceSysAdmin/github-mcp-server/pkg/raw"
+	"github.com/MyEdSpaceSysAdmin/github-mcp-server/pkg/translations"
 	"github.com/google/go-github/v72/github"
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"

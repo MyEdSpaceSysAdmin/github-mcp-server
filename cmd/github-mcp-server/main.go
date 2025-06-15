@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Atif-MyEdSpace/github-mcp-server/internal/ghmcp"
-	"github.com/Atif-MyEdSpace/github-mcp-server/pkg/github"
+	"github.com/MyEdSpaceSysAdmin/github-mcp-server/internal/ghmcp"
+	"github.com/MyEdSpaceSysAdmin/github-mcp-server/pkg/github"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
